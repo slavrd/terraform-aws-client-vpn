@@ -21,6 +21,10 @@ module "aws_client_vpn" {
   associated_subnet_ids        = module.aws_basic_nw.public_subnet_ids
 }
 
+output "aws_ec2_client_vpn_endpoint_id" {
+    value = module.aws_client_vpn.aws_ec2_client_vpn_endpoint_id
+}
+
 module "aws_basic_nw" {
     source = "github.com/slavrd/terraform-aws-basic-network"
     vpc_cidr_block = "172.25.16.0/20"
