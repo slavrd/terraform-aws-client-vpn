@@ -25,5 +25,19 @@ cert /path/to/client/cert/public/key
 * Connection log option cannot be set to `true` as passing logging configuration is not implemented.
 * Cannot use the active directory authentication option.
 
+## Testing with terratest
+
+The module includes a [terratest](https://github.com/gruntwork-io/terratest) test.
+
+The test uses this [terraform-aws-basic-infrastructure](https://github.com/slavrd/terraform-aws-basic-network) module to provision a VPC and a subnet. It then calls the VPN module to build the client VPN.
+
+The terraform code for the test is in `test/fixture.tf`. The parameters of the created AWS resources for the test can be adjusted there.
+
+To run the test:
+
+1. Install Golang >= 1.13 if not already installed.
+2. Make sure AWS access is configured via environment variables or cli configuration file (AWS_REGION environment variable is still needed in this case)
+3. run `go get -v -d -t ./test/...` to install prerequisite golang packages if not already installed.
+4. run `go test -v -timeout 30m ./test/` to execute tests
 
 
