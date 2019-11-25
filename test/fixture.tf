@@ -26,7 +26,7 @@ output "aws_ec2_client_vpn_endpoint_id" {
 }
 
 module "aws_basic_nw" {
-  source               = "github.com/slavrd/terraform-aws-basic-network?ref=0.1.0"
+  source               = "github.com/slavrd/terraform-aws-basic-network?ref=0.1.1"
   vpc_cidr_block       = "172.25.0.0/24"
   public_subnet_cidrs  = ["172.25.0.0/26"]
   name_prefix          = "terratest-aws-client-vpn"
