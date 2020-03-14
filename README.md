@@ -21,7 +21,7 @@ cert /path/to/client/cert/public/key
 
 ## Known issues and limitation
 
-* Since terraform AWS provider currently lacks resourced for EC2 client vpn authorization and route these are created using `local-exec` provisioner and AWS CLI. Because of this the AWS CLI needs to be installed on the machine running terraform.
+* Since terraform AWS provider currently lacks resources for EC2 client vpn authorization and route these are created using `local-exec` provisioner and AWS CLI. Because of this the AWS CLI needs to be installed on the machine running terraform.
 * Connection log option cannot be set to `true` as passing logging configuration is not implemented.
 * Cannot use the active directory authentication option.
 
