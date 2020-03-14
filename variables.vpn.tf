@@ -11,7 +11,7 @@ variable "transport_protocol" {
 
 variable "logging_enable" {
   type        = bool
-  description = "NOT IMPLEMENTED! USE DEFAULT! Wheather to enable VPN connection logging."
+  description = "NOT IMPLEMENTED! USE DEFAULT! Whether to enable VPN connection logging."
   default     = false
 }
 
